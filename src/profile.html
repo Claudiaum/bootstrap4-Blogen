@@ -66,7 +66,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h1>Post Um</h1>
+            <h1><i class="fa fa-user"> </i> Perfil</h1>
           </div>
         </div>
       </div>
@@ -83,63 +83,53 @@
             >
           </div>
           <div class="col-md-3 ml-auto">
-            <a href="index.html" class="btn btn-success btn-block"
-              ><i class="fa fa-check"></i> Salvar Alterações</a
+            <a
+              href="index.html"
+              class="btn btn-success btn-block"
+              data-toggle="modal"
+              data-target="#passwordModal"
+              ><i class="fa fa-lock"></i> Alterar Senha</a
             >
           </div>
           <div class="col-md-3">
             <a href="index.html" class="btn btn-danger btn-block"
-              ><i class="fa fa-remove"></i> Remover Post</a
+              ><i class="fa fa-remove"></i> Remover Conta</a
             >
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Posts Edit -->
-    <section id="edit-post">
+    <!-- Profile Edit -->
+    <section id="edit-profile">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col-md-9">
             <div class="card">
               <div class="card-header">
-                <h4>Editar Post</h4>
+                <h4>Editar Perfil</h4>
               </div>
               <div class="card-block">
                 <form>
                   <div class="form-group">
-                    <label for="title" class="form-control-label">Título</label>
-                    <input type="text" class="form-control" value="Post Um" />
+                    <label for="name" class="form-control-label">Nome</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="Morty Smith"
+                    />
                   </div>
                   <div class="form-group">
-                    <label for="category" class="form-control-label"
-                      >Categoria</label
-                    >
-                    <select class="form-control">
-                      <option value="web-development" selected
-                        >Desenvolvimento Web</option
-                      >
-                      <option value="tech-gadgets"
-                        >Aparelhos Tecnológicos</option
-                      >
-                      <option value="business">Negócios</option>
-                      <option value="health-and-wellness"
-                        >Saúde e Bem-Estar</option
-                      >
-                    </select>
-                  </div>
-                  <div class="form-group bg-faded p-3">
-                    <label for="file" class="form-group-label"
-                      >Enviar Imagem</label
-                    >
-                    <input type="file" class="form-control-file" id="file" />
-                    <small id="fileHelp" class="form-text text-muted">
-                      Tamanho máximo de 3Mb
-                    </small>
+                    <label for="email" class="form-control-label">E-mail</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="just@follow.rick"
+                    />
                   </div>
                   <div class="form-group">
                     <label for="editor1" class="form-control-label"
-                      >Corpo</label
+                      >Biografia</label
                     >
                     <textarea name="editor1" rows="5" class="form-control">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -151,22 +141,17 @@
                   </div>
                 </form>
               </div>
-              <nav class="ml-4">
-                <ul class="pagination">
-                  <li class="page-item disabled">
-                    <a href="#" class="page-link">Anterior</a>
-                  </li>
-                  <li class="page-item active">
-                    <a href="#" class="page-link">1</a>
-                  </li>
-                  <li class="page-item"><a href="#" class="page-link">2</a></li>
-                  <li class="page-item"><a href="#" class="page-link">3</a></li>
-                  <li class="page-item">
-                    <a href="#" class="page-link">Próximo</a>
-                  </li>
-                </ul>
-              </nav>
             </div>
+          </div>
+          <div class="col-md-3">
+            <h3>Sua Foto</h3>
+            <img
+              src="img/default-profile-500x500-square.jpg"
+              alt="Sua Foto de Perfils"
+              class="d-block img-fluid mb-3"
+            />
+            <button class="btn-primary btn btn-block">Editar Imagem</button>
+            <button class="btn-danger btn btn-block">Deletar Imagem</button>
           </div>
         </div>
       </div>
@@ -181,6 +166,44 @@
         </div>
       </div>
     </footer>
+
+    <!-- Password Modal -->
+    <div class="modal fade" id="passwordModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title" id="passwordModalLabel">
+              Editar Senha
+            </h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="password" class="form-control-label">Senha</label>
+                <input type="password" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="password2" class="form-control-label"
+                  >Confirmar Senha</label
+                >
+                <input type="password" class="form-control" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">
+              Fechar
+            </button>
+            <button class="btn btn-success" data-dismiss="modal">
+              Editar Senha
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/tether.min.js"></script>
